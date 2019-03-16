@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha test/",
     "coverage": "nyc --reporter=html mocha test/",
-    "generate_docs": "jsdoc2md src/index.js > docs.md && jsdoc2md src/ctx.js >> docs.md"
+    "generate_docs": "jsdoc2md src/index.js > docs.md && jsdoc2md src/ctx.js >> docs.md",
+    "build": "tsc --watch"
   },
   "keywords": [
     "websockets",
@@ -18,10 +19,12 @@
   "author": "Francis Stokes <stokesie14@gmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^11.11.3",
     "chai": "^4.2.0",
     "jsdoc-to-markdown": "^4.0.1",
     "mocha": "^6.0.1",
-    "nyc": "^13.3.0"
+    "nyc": "^13.3.0",
+    "typescript": "^3.3.3333"
   },
   "dependencies": {
     "uuid": "^3.3.2",
